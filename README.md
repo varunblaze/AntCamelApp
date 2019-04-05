@@ -1,4 +1,4 @@
-# Ant Camel Appliaction
+# Ant Camel Application
 This is a reference for setting up a new Ant-based Camel project. 
 
 ## Setup
