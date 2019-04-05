@@ -1,0 +1,27 @@
+
+<?xml version="1.0"?>
+<project name="SampleJavaProject" default="jar"
+         xmlns:ivy="antlib:org.apache.ivy.ant">
+
+  <!-- Project-specific configuration -->
+  <loadproperties srcfile="project.properties"/>
+  <property name="main.class" value="${package.main}.${ant.project.name}"/>
+  <property name="base.name" value="${artifactId}-${version}"/>
+	<property name="lib"   value="./lib" />
+  <!-- Standard Directory Layout -->
+  <property name="src.dir" value="src"/>
+  <property name="test.dir" value="test"/>
+  <property name="build.dir" value="build"/>
+  <property name="dist.dir" value="dist"/>
+
+
+	<path id="build.classpath">
+		<fileset dir="${lib}" includes="**/*.jar" />
+	</path>
+  <!-- Targets -->
+<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" optimize="on">
+			<classpath refid="build.classpath" />
+		</javac>
+	</target>
+</project>
