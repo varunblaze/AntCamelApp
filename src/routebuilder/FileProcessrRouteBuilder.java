@@ -23,12 +23,7 @@ public class FileProcessrRouteBuilder extends RouteBuilder {
 				   .log("${body}")
 				   .log("${file:name}")
 				   .to("stream:out");
-		        // use system out so it stand out
-		        System.out.println("*********************************************************************************");
-		        System.out.println("Camel will route files from the FTP server: "
-		                + getContext().resolvePropertyPlaceholders("{{ftp.server}}") + " to the target/download directory.");
-		        System.out.println("You can configure the location of the ftp server in the src/main/resources/ftp.properties file.");
-		        System.out.println("Use ctrl + c to stop this application.");
+			System.out.println("Use ctrl + c to stop this application.");
 		        System.out.println("*********************************************************************************");
 		
 	}
