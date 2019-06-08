@@ -1,6 +1,6 @@
 package sample;
 
-import org.apache.camel.main.Main;
+import org.apache.camel.Main;
 
 import routebuilder.FileProcessrRouteBuilder;
 public class AntCamelApp  {
